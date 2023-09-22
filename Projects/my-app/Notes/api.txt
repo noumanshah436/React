@@ -1,0 +1,27 @@
+npm install react-bootstrap bootstrap
+
+
+
+import axios from 'axios'
+
+const requestObject = axios.create({
+  baseURL: process.env.REACT_APP_API_URL
+})
+
+export default requestObject
+
+****************
+
+import requestObject from '../api/apiInstance'
+
+const getAllBlogs = async (setBlogs, setLoading) => {
+  try {
+    const blogs = await requestObject.get('/')
+    setBlogs(blogs.data.data)
+  } catch (e) {
+    console.log(e)
+  }
+  setLoading(true)
+}
+
+export default getAllBlogs

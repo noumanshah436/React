@@ -1,0 +1,53 @@
+// filter() = Returns the elements of an array
+//            that meets a condition specified
+//            in a function. 
+
+let students = [16, 17, 18, 19, 20];
+
+function checkAge(age, index, array){
+
+    if(age >= 18){
+        return true;   //  return true or false
+        // return age;
+    }
+}
+
+let adultStudents = students.filter(checkAge);
+// let adultStudents = students.map(checkAge);  // not good to use here
+
+console.log(adultStudents);
+
+
+
+**********************************************
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.map() method creates a new array from the results of calling a function for every element.</p>
+
+<p id="demo"></p>
+
+<script>
+function abc(num){
+	return num*num;
+}
+const numbers = [ 1,2 ,3,4 ];
+document.getElementById("demo").innerHTML = numbers.map( abc );
+</script>
+
+</body>
+</html>
+
+
+output:*****
+
+JavaScript Arrays
+The Array.map() method creates a new array from the results of calling a function for every element.
+
+1,4,9,16
+**********************************************
+

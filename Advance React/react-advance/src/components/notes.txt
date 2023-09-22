@@ -1,0 +1,1 @@
+ If you add the function as a method without using the arrow function, the setState would not exist without binding the function to the current context.

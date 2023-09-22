@@ -1,0 +1,20 @@
+spread operator 
+{
+
+1)   useState-Object
+
+
+}
+
+
+
+fetch error handling 
+{
+
+conditional renderring multiple returns 
+
+and 
+
+tours project
+
+}

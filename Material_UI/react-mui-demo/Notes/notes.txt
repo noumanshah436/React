@@ -1,0 +1,4 @@
+npx create-react-app react-mui-demo --template typescript
+
+
+emotion -> library to write css with javascript

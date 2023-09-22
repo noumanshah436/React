@@ -1,0 +1,12 @@
+if we do not specify the specific file of a folder in App.js
+
+Then index.js will be the main entry point of the particular folder. So we don't need to specify the file name in App.js
+
+
+*********************
+
+make json package:
+npm init -y
+
+install eslint:
+npm i eslint --save-dev

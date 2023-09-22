@@ -1,0 +1,317 @@
+
+
+1) npm install react-bootstrap bootstrap @material-ui/core
+
+2) add in index.js:
+
+  import "../node_modules/react-bootstrap/dist/react-bootstrap.min.js";
+  import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+*********************************
+
+<lession-1 -    setup
+<lession-2 --    typography
+<lession-3    --  buttons
+<lession-4    -- icons
+<lession-5      -- styles
+<lession-6      -- custom themes and fonts
+<lession-7       -- 
+<lession-8
+<lession-9
+<lession-10
+<lession-11
+<lession-12
+<lession-13
+<lession-14
+<lession-15
+<lession-16
+<lession-17
+<lession-18
+
+
+************************************
+
+2)
+
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+
+export default function Create() {
+  return (
+    <div>
+      <Typography
+        variant="h6"
+        color="textSecondary"
+        component="h2"
+        gutterBottom
+      >
+        Create a New Note
+      </Typography>
+
+      <Typography variant="h1" color="primary" align="center">
+        Create a New Note
+      </Typography>
+
+      <Typography noWrap color="secondary">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+        molestiae magnam voluptate reiciendis fuga totam facere officia, animi
+        sint laboriosam dolorum voluptas cupiditate explicabo dolore veritatis
+        recusandae rem inventore sunt.
+      </Typography>
+    </div>
+  );
+}
+
+
+******************************
+3)
+
+ import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Container from "@material-ui/core/Container";
+
+export default function Create() {
+  return (
+    <Container size="sm">
+      <Typography
+        variant="h6"
+        color="textSecondary"
+        component="h2"
+        gutterBottom
+      >
+        Create a New Note
+      </Typography>
+
+      <Button
+        onClick={() => console.log("you clicked me")}
+        type="submit"
+        color="secondary"
+        variant="contained"
+      >
+        Submit
+      </Button>
+
+      <br />
+
+      <Button type="submit" color="secondary" variant="outlined">
+        Submit
+      </Button>
+      <Button type="submit" color="default">
+        Submit
+      </Button>
+
+      <br />
+
+      <ButtonGroup color="secondary" variant="contained" disableElevation>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    </Container>
+  );
+}
+
+******************************
+4) icons
+
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
+import SendIcon from '@material-ui/icons/Send'
+import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined'
+
+export default function Create() {
+  return (
+    <Container size="sm">
+
+      <Button
+        onClick={() => console.log('you clicked me')}
+        type="submit"
+        color="secondary"
+        variant="contained"
+        startIcon={<SendIcon />}
+        endIcon={<KeyboardArrowRightIcon />}>
+        Submit
+      </Button>
+
+      {/* icons */}
+      <br/>
+      <AcUnitOutlinedIcon />
+      <AcUnitOutlinedIcon color="secondary" fontSize="large" />
+      <AcUnitOutlinedIcon color="secondary" fontSize="small" />
+      <AcUnitOutlinedIcon color="action" fontSize="small" />
+      <AcUnitOutlinedIcon color="error" fontSize="small" />
+      <AcUnitOutlinedIcon color="disabled" fontSize="small" />
+
+    </Container>
+  )
+}
+
+
+********************************
+
+5) styles
+
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles({
+  btn: {
+    fontSize: 60,
+    backgroundColor: 'violet',
+    '&:hover': {
+      background: 'blue'
+    },
+  },
+  title: {
+    textDecoration: 'underline',
+    marginBottom: 20,
+  }
+})
+
+export default function Create() {
+  const classes = useStyles()
+
+  return (
+    <Container size="sm">
+      <Typography
+        className={classes.title}
+        variant="h6"
+        color="textSecondary"
+        component="h2"
+        gutterBottom
+      >
+        Create a New Note
+      </Typography>
+
+      <Button
+        className={classes.btn}
+        onClick={() => console.log('you clicked me')}
+        type="submit"
+        color="secondary"
+        variant="contained"
+        endIcon={<KeyboardArrowRightIcon />}>
+        Submit
+      </Button>
+
+
+    </Container>
+  )
+}
+
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)
+********************************
+
+6)

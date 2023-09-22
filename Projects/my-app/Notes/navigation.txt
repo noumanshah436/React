@@ -1,0 +1,15 @@
+https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
+
+
+https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#use-usenavigate-instead-of-usehistory
+
+
+
+
+In react-router-dom v6 useHistory() is replaced by useNavigate().
+
+You can use:
+
+import { useNavigate } from 'react-router-dom';
+const navigate = useNavigate();
+navigate('/home');

@@ -1,0 +1,4 @@
+https://bretcameron.medium.com/a-beginners-guide-to-redux-with-react-50309ae09a14
+
+
+npm install redux react-redux

@@ -1,0 +1,67 @@
+import { Box, Stack, Grid, Paper } from '@mui/material'
+
+
+//  using Box we have access to 'sx' prop, where we can define custom style that has access to the theme
+//  we can also give css properties as props directly.
+
+//  Box
+//  Stack
+//  Paper:   Used to Build the cards component in mui.
+
+export const MuiLayout = () => {
+  return (
+    <Paper sx={{ padding: '32px' }} elevation={2}>
+      <Stack border='1px solid' spacing={2} direction='row'>
+        <Box
+          component='span'
+          sx={{
+            backgroundColor: 'primary.main',
+            color: 'white',
+            height: '100px',
+            width: '100px',
+            padding: '16px',
+            '&:hover': {
+              backgroundColor: 'primary.light'
+            }
+          }}>
+          Codevolution
+        </Box>
+        <Box
+
+          display='flex'
+          height='100px'
+          width='100px'
+          bgcolor='success.light'
+          // padding by default multiple by 8px
+          p={2}>
+
+          </Box>
+      </Stack>
+      <Grid rowSpacing={2} columnSpacing={1} container my={4}>
+        <Grid item xs={6}>
+          <Box p={2} bgcolor='primary.light'>
+            Item 1
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={2} bgcolor='primary.light'>
+            Item 2
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={2} bgcolor='primary.light'>
+            Item 3
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={2} bgcolor='primary.light'>
+            Item 4
+          </Box>
+        </Grid>
+      </Grid>
+    </Paper>
+  )
+}
+
+
+// xs = { auto}     //  take space according to the its content

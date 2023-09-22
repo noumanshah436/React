@@ -1,0 +1,22 @@
+
+
+1) create store:
+  -create folder structure
+  -make root reducer
+  -create store
+
+2) configure the store with app
+  -wrap App component in index.js in  Provider and give it store
+  ( now the global store is available to the entire app)
+
+3) Create Slices => actions + reducers
+4) call actions from component
+
+**********************
+
+useDispatch -> actions
+useSelector -> for getting state data from data
+
+
+https://www.youtube.com/watch?v=s2s15tmxPpA
+48:55

@@ -1,0 +1,9 @@
+ES7 React/Redux/GraphQL/React-Native snippets
+prettier 
+ 
+Creates a React Functional Component with ES7 module system (ES7 React/Redux/GraphQL/React-Native snippets)
+
+rafce     react arrow function component export
+
+
+

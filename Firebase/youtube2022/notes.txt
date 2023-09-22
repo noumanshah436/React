@@ -1,0 +1,29 @@
+1) create project in firebase
+2) add firebase files in app and copy firebaseConfig
+
+3) For Authrntication:
+a) click on authentication -> getstarted -> and enable email_password and save
+b) Go to users menu and create one user
+nouman.rehman@devsinc.com
+123456
+
+c) create login page
+
+
+
+4) create firestore database for more details of user
+
+
+******************
+
+to see docs,
+click on go to docs
+search for auth
+get started -> web and learn
+
+https://firebase.google.com/docs/auth/web/password-auth
+
+
+***********************
+
+https://www.youtube.com/watch?v=D9W7AFeJ3kk

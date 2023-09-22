@@ -1,0 +1,8 @@
+1) create firebase project
+2) create firebase-config file
+
+3) go to authenticationa and enable email and password
+
+
+nouman@gmail.com
+123456

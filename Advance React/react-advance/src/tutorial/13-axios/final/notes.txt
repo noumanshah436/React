@@ -1,0 +1,10 @@
+Axios Tutorial in Hindi || Fetch Data using Axios in React JS 🔥
+
+video:
+https://www.youtube.com/watch?v=Gl-vOU7ZU9A
+
+Video Notes:
+https://www.thapatechnical.com/2022/08/complete-axios-in-15minutes.html
+
+Axios Docs:
+https://www.npmjs.com/package/axios

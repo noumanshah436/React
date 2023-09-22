@@ -1,0 +1,128 @@
+https://github.com/facebook/create-react-app/
+https://reactjs.org/docs/create-a-new-react-app.html
+https://github.com/WebDevSimplified
+
+
+  
+
+2) open git bash in the folder you where you want to create a basic react application.
+       ( we can also use bash cmd or termnal or powershell , but cmd is fast ) 
+
+
+npm install -g create-react-app           //  install this module (for only first time) 
+ 
+npx create-react-app my-app    |   or   ( npx create-react-app .   )  to create project in same folder    
+cd my-app      
+npm start 
+
+
+http://localhost:3000/
+
+*************************************
+Success! Created my-app at D:\JS React\first-app\my-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd my-app
+  npm start
+
+Happy hacking!
+
+************************************
+
+run react on different port:
+
+PORT=3001 npm start
+
+*************************************
+
+
+npm i uuid      //  install library to generate random unique id's
+
+
+
+
+npm install uuid 
+     
+Then import uuidv4 from uuid library
+const { v4: uuidv4 } = require('uuid');
+
+
+Inside function:
+
+  setTodo(prevTodo => {
+
+    return [...prevTodo,{id:uuidv4(), name: name, complete:false}]
+  }) 
+
+
+*************************************
+
+Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other
+ React features without writing a class. Hooks are the functions which "hook into" React state and lifecycle 
+features from function components. Also, it does not replace your knowledge of React concepts. ...
+
+{ useState, useRef, useEffect }
+
+
+*************************************
+
+we install two things
+
+1  npm install -g create-react-app
+2  npm install uuid 
+ 
+
+*****************************************
+
+
+deployment
+
+1) npm run build
+    Bundles the app into static files for production.
+
+2) https://app.netlify.com/
+
+3) just drag and drop
+
+
+http://localhost:3000/
+https://app.netlify.com/teams/noumanshah042/overview
+
+*****************************************
+
+for advance topics install dependencies
+
+
+npm install && npm start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

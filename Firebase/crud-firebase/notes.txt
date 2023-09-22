@@ -1,0 +1,79 @@
+
+npx create-react-app crud-firebase
+npm i firebase
+
+**************************
+
+Set up Firebase Connection with react app:
+
+1) get started
+
+2) create project
+
+3) follow steps comfortably
+
+4) Now to connect app:
+  a) go to project settings from left side gear icon or
+  just select 'Add Firebase to your web app' and
+  then give nick name for app and click register
+
+  b) now follow 'Add Firebase SDK' on same page ( just read and copy firebaseConfig object )
+  c) create firebase-config.js file in src and paste firebaseConfig object in it
+      https://console.firebase.google.com/project/react-crud-76c4f/overview
+
+5) create firestore database
+  a) on right side, click on Build->Firestore Database and click on create database
+  b) leave 'Start in Production mode' and click next and click enable
+  it will create instance of database int the cloud
+
+6) on Rules tab just change false to true and click Publish
+  rules_version = '2';
+  service cloud.firestore {
+    match /databases/{database}/documents {
+      match /{document=**} {
+        allow read, write: if true;
+      }
+    }
+  }
+
+IN firebase terms:
+collection = databsae table
+document = row of table (entries of database)
+
+7)  Now create collection(or database table)
+  a)give collection_id (table name ) for example users
+  b) add one document(entry)
+
+Firebase is no-sql database  similar to mongoDB or dinimoDB
+
+
+************************************
+
+IN firebase terms:
+collection = databsae table
+document  = row of table (entries of database)
+
+-> so docs means all the documents of specific collection
+
+************************************
+
+getDocs = return all the  documents from the specific collection
+addDoc = to add new document to the collection
+doc =  get specific document of the collection
+updateDoc = update existing document
+deleteDoc = delete  document
+
+************************************
+
+
+syntax:
+
+getDocs( collectionRef )
+
+addDoc(collectionRef , payload_data )
+
+doc(db, collection_name, id);
+
+updateDoc(document, fields_to_update );
+
+deleteDoc(document);

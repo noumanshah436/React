@@ -1,0 +1,41 @@
+.burger-plate {
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+}
+.slice {
+  background-color: #db9130;
+  width: 100%;
+  height: 100px;
+}
+.burger-plate .uper-slice {
+  border-radius: 100px 100px 0px 0px;
+}
+.burger-plate .lower-slice {
+  border-radius: 0px 0px 50px 50px;
+}
+.item {
+  width: 100%;
+  border-radius: 50px;
+  margin: 5px auto;
+}
+.letuce {
+  background: hsl(99, 49%, 49%);
+  height: 40px;
+}
+.bacon {
+  height: 20px;
+  border-radius: 0px;
+  background-color: #c24b26;
+}
+
+.cheese {
+  height: 30px;
+  background-color: #e4c532;
+}
+
+.meat {
+  height: 50px;
+  background-color: #76310d;
+}

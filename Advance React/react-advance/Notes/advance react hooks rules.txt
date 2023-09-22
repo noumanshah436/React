@@ -1,0 +1,7 @@
+// Thing related to all hooks ( hooks from react or user defined ):
+
+// 1) name of hook starts with use ( useEffect , useuseState , useCallback, useMemo)
+// 2) component must be uppercase ( like UseStateBasics)
+// 3) invoke hooks inside function/component body
+// 4) we cannot call the hooks conditonally ( we cannot delare hook inside if block)
+      { we cannot place hooks inside the conditionals but we can use if/else inside of the callback function of hook}

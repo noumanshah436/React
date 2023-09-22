@@ -1,0 +1,2 @@
+paste these basic codes in the file   index.js  and run react app.
+

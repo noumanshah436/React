@@ -1,0 +1,25 @@
+
+basic react code :  https://github.com/john-smilga/react-basics-2020
+advance react code:   https://github.com/john-smilga/react-advanced-2020
+
+
+
+
+********************************
+
+
+Birthday reminder
+
+https://react-projects.netlify.app/
+https://www.youtube.com/watch?v=a_7Z7C_JCyo
+
+https://github.com/john-smilga/react-projects
+
+
+************************
+
+Burger app
+
+
+https://github.com/ruvictor/burger-react
+https://www.youtube.com/watch?v=hs9C0iSnaNk
