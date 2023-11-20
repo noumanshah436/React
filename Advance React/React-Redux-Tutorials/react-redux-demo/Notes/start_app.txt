@@ -1,0 +1,28 @@
+
+1) nvm use 20
+
+2) npm run start
+
+
+*********************
+
+setup project after clone:
+
+$ nvm use 20
+$ node -v
+  v20.8.0
+$ npm i
+$ npm audit fix
+$ npm audit fix --force
+$ npm run start
+
+*********************
+
+$ npm -v
+10.2.0
+
+$ nvm -v
+0.39.1
+
+$ node -v
+  v20.8.0

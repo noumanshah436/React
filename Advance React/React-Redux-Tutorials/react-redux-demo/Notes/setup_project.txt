@@ -1,0 +1,9 @@
+$ node -v
+v20.8.0
+
+
+npx create-react-app react-redux-demo
+
+npm install redux react-redux
+
+npm run start

@@ -1,0 +1,20 @@
+
+Follow tutorials:
+
+1) create actions
+2) create reducers
+3) create store and provide it to the app in app.js
+4) create react component and we can access redux store in our component in two ways
+    i) using connect function that maps our component to the redux store (see cakeContainer.js)
+    ii) using useSelector, useDispatch hooks (see HookCakeContainer.js)
+
+
+*****************************
+
+How you can add another reducer for newFeature in this app:
+
+1) create newFeature folder in `src/redux` and add files in it for action-types, actions-creators and the reducer.
+2) Export you action creator from `src/redux/index.js` and import the reducer in root reducer.
+3) create new component in `src/components` and access the state as well as dispatch the new action.
+
+******************************

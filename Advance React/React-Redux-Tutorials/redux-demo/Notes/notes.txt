@@ -1,0 +1,17 @@
+npm init --yes
+npm install redux
+
+node index
+
+npm install redux-logger
+
+************************
+
+npm i redux-thunk
+
+  redux-thunk is standard way to create asynchronous action creators in your application.
+  redux-thunk library is basically a middleware that we will apply to our redux store
+
+************************
+
+https://www.youtube.com/watch?v=_KhGdZEWC4c&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=4
