@@ -5,15 +5,16 @@ import {
   FETCH_USERS_FAILURE
 } from './userTypes'
 
+// fetchUsers function return a function that can perform side-effects such as API calls
 export const fetchUsers = () => {
   return (dispatch) => {
-    dispatch(fetchUsersRequest())
+    dispatch(fetchUsersRequest())   // this will set loading to true
     axios
       .get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
         // response.data is the users
         const users = response.data
-        dispatch(fetchUsersSuccess(users))
+        dispatch(fetchUsersSuccess(users)) // this will store users in our state
       })
       .catch(error => {
         // error.message is the error message

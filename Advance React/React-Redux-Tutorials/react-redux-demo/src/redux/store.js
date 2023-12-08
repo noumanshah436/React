@@ -11,3 +11,7 @@ const store = createStore(
 )
 
 export default store
+
+// Applied logger and thunk middlewares using applyMiddleware function.
+
+// Using composeWithDevTools to use devtools chrome extension.

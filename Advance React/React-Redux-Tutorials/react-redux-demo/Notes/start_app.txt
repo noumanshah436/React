@@ -1,7 +1,6 @@
 
-1) nvm use 20
-
-2) npm run start
+nvm use 20
+npm run start
 
 
 *********************

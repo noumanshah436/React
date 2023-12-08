@@ -32,3 +32,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemContainer);
+
+// React Redux Tutorials - 26 - mapStateToProps (ownProps understanding)
+// https://www.youtube.com/watch?v=prg6YzRcEvE&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=26
