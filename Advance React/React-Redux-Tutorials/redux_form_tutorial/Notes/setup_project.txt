@@ -1,0 +1,16 @@
+
+
+npx create-react-app redux_form_tutorial
+
+cd redux_form_tutorial
+
+npm install --save redux react-redux redux-form
+
+npm start or npm run start
+
+
+*****************************
+
+npm install --save redux-devtools-extension
+
+npm install redux-form-validators@3.3.2 --legacy-peer-deps

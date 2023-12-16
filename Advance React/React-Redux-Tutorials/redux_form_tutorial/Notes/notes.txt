@@ -1,0 +1,98 @@
+
+Managing Form State in React With Redux Form
+
+https://www.digitalocean.com/community/tutorials/managing-form-state-in-react-with-redux-form
+
+*******************************
+Redux form official site:
+https://redux-form.com/8.3.0/
+https://redux-form.com/8.3.0/docs/api/   (working)
+
+Doc Examples (Good):
+https://redux-form.com/7.0.1/examples/
+
+*******************************
+
+Intro to Redux Form:
+
+redux-form is a great way of managing forms that are powered by Redux.
+It is a Higher-Order-Component (HOC) that uses react-redux to make sure HTML forms in React use Redux to store all of its state.
+
+*******************************
+
+redux-form has the following components to help you build your applications:
+
+In Redux Form, `formReducer`, `reduxForm`, and `Field` are key concepts used to manage and work with forms in a Redux-based application. Let's break down each of them:
+
+1. **formReducer:**
+   - The `formReducer` is a built-in reducer provided by the `redux-form` library. It manages the state of
+   your forms in the Redux store. When you create a form using Redux Form, the `formReducer` handles actions
+    related to form state changes, such as form initialization, field value updates, form submission, and
+    more. You typically include this reducer in your overall Redux store configuration.
+
+
+2. **reduxForm:**
+   - `reduxForm` is a higher-order component (HOC) provided by the `redux-form` library. It is used to wrap
+   your form component and connect it to the Redux store. This HOC is responsible for injecting the
+   necessary Redux Form logic and state into your form component. When you use `reduxForm` to wrap your
+   form, it takes care of managing the form state, validation, and handling form submission.
+
+
+   Example of using `reduxForm`:
+
+   ```javascript
+   import { reduxForm } from 'redux-form';
+
+   const MyForm = (props) => {
+     // Your form component logic here
+   };
+
+   export default reduxForm({
+     form: 'myForm', // unique identifier for this form
+     // other configuration options can go here
+   })(MyForm);
+   ```
+
+3. **Field:**
+   - The `Field` component is another component provided by `redux-form`. It is used to represent an
+   individual input field within your form. You use the `Field` component to define each input field, and it
+   automatically manages the state and interactions for that field. The `Field` component is typically used
+   inside the component wrapped by `reduxForm`.
+
+   Example of using `Field`:
+
+   ```javascript
+   import { Field } from 'redux-form';
+
+   const MyForm = (props) => {
+     return (
+       <form>
+         <div>
+           <label>Username</label>
+           <Field
+             name="username"
+             component="input"
+             type="text"
+             placeholder="Enter your username"
+           />
+         </div>
+         {/* Other fields go here */}
+       </form>
+     );
+   };
+   ```
+
+  The Field component comes from the redux-form package and it’s how we write the input field. The type prop
+  indicates what type of input it should be, that is, a radio input, a checkbox input, a text input or an
+  email input. The component prop determines what type of input field it should be, it could be input,
+  textarea or select tags and the name prop is what will be used to identify the state of the fields in the
+  redux store which we’ll create below.
+
+
+In summary, `formReducer` manages the overall form state in the Redux store, `reduxForm` is a higher-order
+component that connects your form to the Redux store, and `Field` is used to define individual input fields
+within your form. Together, these components help you manage and handle forms in a Redux-based application.
+
+*******************************
+*******************************
+*******************************

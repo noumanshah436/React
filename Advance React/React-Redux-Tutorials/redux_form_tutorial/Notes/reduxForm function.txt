@@ -1,0 +1,14 @@
+
+
+reduxForm is a function provided by the redux-form library for connecting your form component to the Redux store.
+
+Config parameter object passed with reduxForm:
+
+form: 'ticket_settings':
+This specifies the name of the form. It is an identifier for the form data in the Redux store.
+
+touchOnChange: true:
+This option ensures that the form fields are marked as "touched" when they are changed.
+
+enableReinitialize: false:
+This option prevents the form from automatically reinitializing when the form name changes.

@@ -45,6 +45,13 @@ Happy hacking!
 
 *************************************
 
+reinstall node modules in case of dependencies errro:
+
+rm -rf node_modules
+npm install
+
+
+*************************************
 
 npm i uuid      //  install library to generate random unique id's
 
