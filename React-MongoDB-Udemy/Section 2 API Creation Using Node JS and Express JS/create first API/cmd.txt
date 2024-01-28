@@ -1,0 +1,48 @@
+
+1) npm init 		//  create package.json file
+
+2) create index.js file
+
+3) npm i express    //  i for install  // this will install expressJS in the package node_modules 
+
+
+4) npm i -g nodemon    //  g for global   //  or you may write as
+npm install -g nodemon 
+
+//  nodemon is used to monitor the changes and it will automatically deploy your changes
+
+
+5) set path variable for nodemon
+	https://stackoverflow.com/questions/40359590/nodemon-command-is-not-recognized-in-terminal-for-node-js-server
+
+6) write code in index.js
+
+**********************
+const express = require('express')
+
+const app = express() // creating object
+
+// bind this app
+app.use(express.json())
+
+const books=[
+    {title:'java', id:1},
+    {title:'python', id:2},
+    {title:'Nodejs ', id:3},
+    {title:'python', id:4}
+]
+
+app.get('/',(req, resp)=>{
+    resp.send('Welcome Nouman')
+})
+
+// bind this to actual server
+app.listen(8080) // we can run to any available port
+
+
+************************
+
+7)  Run code
+
+nodemon index.js
+http://localhost:8080/    //  go here to see response

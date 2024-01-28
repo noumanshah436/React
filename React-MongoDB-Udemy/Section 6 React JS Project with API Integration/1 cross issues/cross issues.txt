@@ -1,0 +1,13 @@
+IN BOOKS-API
+
+
+npm install cors 
+
+now in the API route file (mongodb.js)
+
+
+const cors = require('cors')
+
+and after app
+
+app.use(cors())
