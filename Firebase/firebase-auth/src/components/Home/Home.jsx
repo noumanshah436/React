@@ -1,7 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase-config";
 import { signOut } from "firebase/auth";
+
+import PropTypes from "prop-types"; // Import PropTypes
 
 const logout = async () => {
   await signOut(auth);
@@ -28,5 +29,10 @@ function Home(props) {
     </div>
   );
 }
+
+// Define prop types for InputControl
+Home.propTypes = {
+  name: PropTypes.string, // label should be a string
+};
 
 export default Home;

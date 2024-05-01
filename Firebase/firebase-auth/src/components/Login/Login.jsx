@@ -1,88 +1,74 @@
-import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 import InputControl from "../InputControl/InputControl";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase-config";
 
-import styles from "./Signup.module.css";
+import styles from "./Login.module.css";
+import { useState } from "react";
 
-function Signup() {
+function Login() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    name: "",
     email: "",
     pass: "",
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const signUp = async () => {
+  const login = async () => {
     try {
-      setSubmitButtonDisabled(true);
-      const res = await createUserWithEmailAndPassword(
+      const user = await signInWithEmailAndPassword(
         auth,
         values.email,
         values.pass
       );
-      const user = res.user;
-      await updateProfile(user, {
-        displayName: values.name,
-      });
+      console.log(user);
       setSubmitButtonDisabled(false);
       navigate("/");
     } catch (error) {
       setSubmitButtonDisabled(false);
-      setErrorMsg(error.message);
+      console.log(error.message);
     }
   };
 
   const handleSubmission = () => {
-    if (!values.name || !values.email || !values.pass) {
+    if (!values.email || !values.pass) {
       setErrorMsg("Fill all fields");
       return;
     }
     setErrorMsg("");
-
-    signUp();
+    login();
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.innerBox}>
-        <h1 className={styles.heading}>Signup</h1>
+        <h1 className={styles.heading}>Login</h1>
 
         <InputControl
-          label="Name"
-          placeholder="Enter your name"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, name: event.target.value }))
-          }
-        />
-        <InputControl
           label="Email"
-          placeholder="Enter email address"
           onChange={(event) =>
             setValues((prev) => ({ ...prev, email: event.target.value }))
           }
+          placeholder="Enter email address"
         />
         <InputControl
           label="Password"
-          placeholder="Enter password"
           onChange={(event) =>
             setValues((prev) => ({ ...prev, pass: event.target.value }))
           }
+          placeholder="Enter Password"
         />
 
         <div className={styles.footer}>
           <b className={styles.error}>{errorMsg}</b>
-          <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-            Signup
+          <button disabled={submitButtonDisabled} onClick={handleSubmission}>
+            Login
           </button>
           <p>
             Already have an account?{" "}
             <span>
-              <Link to="/login">Login</Link>
+              <Link to="/signup">Sign up</Link>
             </span>
           </p>
         </div>
@@ -91,4 +77,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

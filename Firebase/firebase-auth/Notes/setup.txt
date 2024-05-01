@@ -1,0 +1,24 @@
+
+
+Project setup:
+
+npm create vite@latest
+
+✔ Project name: … firebase-auth
+✔ Select a framework: › React
+✔ Select a variant: › JavaScript
+
+Scaffolding project in /home/dev/programming-toolkit/React/Firebase/firebase-auth...
+
+Done. Now run:
+
+  cd firebase-auth
+  npm install
+  npm run dev
+
+
+*************************
+
+npm install firebase
+
+npm install react-router-dom

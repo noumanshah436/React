@@ -1,0 +1,23 @@
+
+
+
+Firebase React Course For Beginners - Learn Firebase V9+ in 2 Hours
+
+
+https://www.youtube.com/watch?v=2hR-uWjBAgw
+
+
+TIMESTAMPS
+
+00:00:00 | Intro
+00:03:04 |  Project Setup
+00:06:56 |  Setting up Authentication
+00:28:44 |  CRUD
+00:44:22 |  Firestore Rules
+01:03:46 |  File Upload
+01:10:27 |  Hosting using Firebase
+
+***********************************************
+
+
+

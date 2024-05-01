@@ -1,3 +1,46 @@
+React Firebase Tutorial | AUTH - CRUD - Image Upload
+
+https://www.youtube.com/watch?v=D9W7AFeJ3kk
+
+*************************
+
+Use chrome user: noumanshah436@gmail.com
+
+https://console.firebase.google.com/project/tutorial-80678/overview
+
+**************************
+
+1) create firebase project
+
+2) go to authenticationa and enable email and password
+
+3) create new user from users tab for now:
+noumanshah436@gmail.com
+12345678
+
+
+4) create "src/firebase-config.js" file in react project
+
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCvkI-eNkAehqKbv3CsIWL8Vgmmtn6rrfs",
+  authDomain: "tutorial-80678.firebaseapp.com",
+  projectId: "tutorial-80678",
+  storageBucket: "tutorial-80678.appspot.com",
+  messagingSenderId: "392419082866",
+  appId: "1:392419082866:web:36a81689cabab5d833f8eb"
+};
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+
+
+5) Add logic for login and signup in "src/App.js"
+
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -106,3 +149,4 @@ const App = () => {
 };
 
 export default App;
+
