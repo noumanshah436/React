@@ -1,0 +1,149 @@
+
+
+https://firebase.google.com/docs/firestore/query-data/queries
+
+
+*********************************************************************************************************
+creare and execute queries
+*********************************************************************************************************
+
+const citiesRef = collection(db, "cities");
+
+const q = query(citiesRef, where("state", "==", "CA"));
+const querySnapshot = await getDocs(q);
+querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+});
+
+
+*********************************************************************************************************
+Query operators
+*********************************************************************************************************
+The where() method takes three parameters: a field to filter on, a comparison operator, and a value. Cloud Firestore supports the following comparison operators:
+
+< less than
+<= less than or equal to
+== equal to
+> greater than
+>= greater than or equal to
+!= not equal to
+array-contains
+array-contains-any
+in
+not-in
+
+*********************************************************************************************************
+Not equal (!=)
+*********************************************************************************************************
+
+Use the not equal (!=) operator to return documents where the given field exists and does not match the comparison value. 
+
+For example:
+ 
+const notCapitalQuery = query(citiesRef, where("capital", "!=", false));
+
+This query returns every city document where the capital field exists with a value other than false or null. 
+This includes city documents where the capital field value equals true or any non-boolean value besides null.
+
+This query does not return city documents where the capital field does not exist. 
+Not-equal (!=) and not-in queries exclude documents where the given field does not exist.
+
+A field exists when it's set to any value, including an empty string (""), null, and NaN (not a number). 
+
+Note that null field values do not match != clauses, because x != null evaluates to undefined.
+
+Warning: 
+A != query clause might match many documents in a collection. 
+To control the number of results returned, use a limit clause or paginate your query.
+
+******************
+Limitations
+
+Note the following limitations for != queries:
+
+Only documents where the given field exists can match the query.
+You can't combine not-in and != in a compound query.
+In a compound query, range (<, <=, >, >=) and not equals (!=, not-in) comparisons must all filter on the same field.
+
+*********************************************************************************************************
+in, not-in, and array-contains-any
+*********************************************************************************************************
+
+in operator:
+
+Use the in operator to combine up to 30 equality (==) clauses on the same field with a logical OR. An in query returns documents where the given field matches any of the comparison values.
+
+********************
+
+array-contains-any
+
+An array-contains-any query returns documents where the given field is an array that contains one or more of the comparison values:
+
+Use the array-contains-any operator to combine up to 30 array-contains clauses on the same field with a logical OR. 
+
+********************
+
+Limitations
+
+Note the following limitations for in, not-in, and array-contains-any:
+
+Cloud Firestore provides support for logical OR queries through the or, in, and array-contains-any operators. These queries are limited to 30 disjunctions based on the query's disjunctive normal form.
+You can use at most one array-contains clause per disjunction (or group). You can't combine array-contains with array-contains-any in the same disjunction.
+You can't combine not-in with not equals !=.
+not-in supports up to 10 comparison values.
+
+*********************************************************************************************************
+Compound (AND) queries (https://firebase.google.com/docs/firestore/query-data/queries#compound_and_queries)
+*********************************************************************************************************
+
+You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). 
+However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
+
+You can perform range (<, <=, >, >=) or not equals (!=) comparisons only on a single field, 
+and you can include at most one array-contains or array-contains-any clause in a compound query:
+
+
+ 
+Valid: Range filters on only one field
+const q1 = query(citiesRef, where("state", ">=", "CA"), where("state", "<=", "IN"));
+const q2 = query(citiesRef, where("state", "==", "CA"), where("population", ">", 1000000));
+
+Invalid: Range filters on different fields
+const q = query(citiesRef, where("state", ">=", "CA"), where("population", ">", 100000));
+
+*********************************************************************************************************
+Query limitations
+*********************************************************************************************************
+The following list summarizes Cloud Firestore query limitations:
+
+
+Cloud Firestore provides support for logical OR queries through the or, in, and array-contains-any operators. 
+These queries are limited to 30 disjunctions based on the query's disjunctive normal form.
+
+You can use at most one array-contains clause per disjunction (or group). You can't combine array-contains with array-contains-any in the same disjunction.
+
+You can't combine not-in with in, array-contains-any, or or in the same query.
+
+Only a single not-in or != is allowed per query.
+
+not-in supports up to 10 comparison values.
+
+The sum of filters, sort orders, and parent document path (1 for a subcollection, 0 for a root collection) in a query cannot exceed 100. This is calculated based on the disjunctive normal form of the query.
+
+A query with an inequality filter on a field implies ordering by that field and filters for existence of that field.
+
+*********************************************************************************************************
+Order and limit data
+*********************************************************************************************************
+
+const q = query(citiesRef, orderBy("name"), limit(3));
+const q = query(citiesRef, orderBy("name", "desc"), limit(3));
+
+You can also order by multiple fields. For example, if you wanted to order by state, and within each state order by population in descending order:
+
+const q = query(citiesRef, orderBy("state"), orderBy("population", "desc"));
+
+Note the following restriction for orderBy() clauses:
+An orderBy() clause also filters for existence of the given fields. The result set will not include documents that do not contain the given fields.
+

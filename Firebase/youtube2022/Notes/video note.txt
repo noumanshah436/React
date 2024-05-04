@@ -1,0 +1,27 @@
+
+https://www.youtube.com/watch?v=D9W7AFeJ3kk&t=1897s
+
+0:00 Introduction
+01:06 Installing Firebase to a React App
+05:07 React Firebase Authentication  (see Login.jsx)
+10:26 React Firebase Login
+17:19 React advanced auth with Firebase
+30:28 Firebase Crud: How to create data?
+44:10 React upload file to Firebase Storage
+54:50 Firebase Crud: How to fetch data?
+01:00:46 Firebase Crud: How to delete data?
+01:04:10 Firebase React Real-time data
+01:10:32 How to use Firebase query?
+01:27:16 Outro
+
+*******************************
+Used files:
+
+1) To create user:
+src/pages/new/New.jsx
+
+2) fetch and display users data (also listens for relatime updates)
+src/components/datatable/Datatable.jsx
+
+3) firebase query:
+src/components/widget/Widget.jsx

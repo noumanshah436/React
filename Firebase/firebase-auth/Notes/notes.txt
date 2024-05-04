@@ -2,3 +2,19 @@
 React Firebase Tutorial | AUTH - CRUD - Image Upload
 
 https://www.youtube.com/watch?v=D9W7AFeJ3kk
+
+
+******************************
+https://softauthor.com/firebase-auth-onauthstatechange/
+
+onAuthStateChanged:
+
+The onAuthStateChanged() method gets triggered when a user authentication state changes 
+such as creating a new user account, logging in to a user account, or logging out.
+
+For example, when the app loads for the first time the onAuthStateChange() method will return null because at that 
+time no user account is created.
+
+As soon as a new user account is created, the onAuthStateChanged() method will return the newly logged-in user’s data.
+
+******************************

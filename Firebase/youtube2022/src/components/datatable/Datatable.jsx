@@ -48,6 +48,7 @@ const Datatable = () => {
 
     // clean up
     return () => {
+      // we need to stop listening for updates otherwise it will cause memory leakage
       unsub();
     };
   }, []);

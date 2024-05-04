@@ -87,8 +87,9 @@ const Widget = ({ type }) => {
       const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
       const prevMonth = new Date(new Date().setMonth(today.getMonth() - 2));
 
+      // data.query can be "users" or "products"
       const lastMonthQuery = query(
-        collection(db, data.query),
+        collection(db, data.query), // data.query is the local state
         where("timeStamp", "<=", today),
         where("timeStamp", ">", lastMonth)
       );

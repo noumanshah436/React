@@ -1,0 +1,36 @@
+
+Upload files with Cloud Storage on Web
+
+https://firebase.google.com/docs/storage/web/upload-files
+
+search this "Monitor Upload Progress"
+
+**********************************
+
+React Firebase Tutorial | AUTH - CRUD - Image Upload
+
+https://www.youtube.com/watch?v=D9W7AFeJ3kk&t=1897s
+
+**********************************
+
+How to search in firebase documentation:
+
+to see docs,
+click on go to docs
+search for auth
+get started -> web and learn
+
+https://firebase.google.com/docs/auth/web/password-auth
+
+
+**********************************
+
+Firebase project I'm using: (noumanshah436@gmail.com account)
+
+https://console.firebase.google.com/project/tutorial-80678/authentication/users
+
+https://console.firebase.google.com/project/tutorial-80678/firestore/databases/-default-/data/~2F
+
+https://console.firebase.google.com/project/tutorial-80678/storage/tutorial-80678.appspot.com/files
+
+**********************************

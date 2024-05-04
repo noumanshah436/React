@@ -1,0 +1,27 @@
+
+
+Firebase project used in this Tutorial:
+
+https://console.firebase.google.com/project/tutorial-80678/firestore/databases/-default-/data/~2F
+
+
+*********************************
+https://softauthor.com/firebase-auth-onauthstatechange/
+
+*********************************
+
+Firebase – Full Course for Beginners
+
+https://www.youtube.com/watch?v=fgdpvwEWJ9M&t=168s
+
+https://codesandbox.io/p/sandbox/firebase-basics-63nhxx?file=%2Fsrc%2FApp.js
+
+*********************************
+
+add data:
+https://firebase.google.com/docs/firestore/manage-data/add-data
+
+Listen for realtime updates:
+https://firebase.google.com/docs/firestore/query-data/listen
+
+*********************************

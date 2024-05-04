@@ -1,0 +1,5 @@
+// https://softauthor.com/firebase-firestore-where-query/
+
+
+
+https://softauthor.com/firestore-querying-filtering-data-for-web/

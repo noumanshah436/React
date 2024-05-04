@@ -1,0 +1,39 @@
+https://firebase.google.com/docs/cli
+
+***********************
+
+steps to deploy:
+
+1) install firebase tools
+2) generate project build
+3) login to firebase ci
+4) Initialize the project
+5) deploy the project
+
+********************************
+
+1) install firebase cli
+$ npm install -g firebase-tools
+
+2) create build of the project:
+$ npm run build
+
+3) Login to firebase using firebase ci:
+$ firebase login:ci
+
+4) Initialize a Firebase project
+$ firebase init
+
+    Follow steps:
+        i) press y to proceed 
+        ii) press space to select "Hosting: configure files for firebase hosting" option and press enter
+        iii) for public directory, type "build" or whatever the dir name
+        iv) configure a single app =  Yes
+        v) Setup automatic build with github = No
+        vi) overrite =  No
+
+5) desploy the project:
+
+$ firebase deploy
+
+********************************

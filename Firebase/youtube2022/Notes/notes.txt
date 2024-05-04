@@ -9,21 +9,15 @@ nouman.rehman@devsinc.com
 
 c) create login page
 
-
-
 4) create firestore database for more details of user
 
 
-******************
+***************************************
 
-to see docs,
-click on go to docs
-search for auth
-get started -> web and learn
+When we delete or update something directly in firebase console, it'not updated in our application.
 
-https://firebase.google.com/docs/auth/web/password-auth
+To achieve this real time update see
 
+https://firebase.google.com/docs/firestore/query-data/listen
 
-***********************
-
-https://www.youtube.com/watch?v=D9W7AFeJ3kk
+***************************************

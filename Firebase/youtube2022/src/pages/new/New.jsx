@@ -22,6 +22,7 @@ const New = ({ inputs, title }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
+    // upload file to Firebase
     const uploadFile = () => {
       const name = new Date().getTime() + file.name;
 
@@ -52,6 +53,7 @@ const New = ({ inputs, title }) => {
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            // setData({ ...data, image_url: downloadURL });
             setData((prev) => ({ ...prev, img: downloadURL }));
           });
         }
@@ -71,6 +73,11 @@ const New = ({ inputs, title }) => {
 
   const handleAdd = async (e) => {
     e.preventDefault();
+
+    // here we are doin 2 things:
+    // 1) Create user(with email and password field only), that can be authenticated
+    // 2) Adding user details to firestore database "users" (keeping the same id of user)
+
     try {
       const res = await createUserWithEmailAndPassword(
         auth,

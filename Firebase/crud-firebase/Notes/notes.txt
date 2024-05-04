@@ -81,3 +81,43 @@ doc(db, collection_name, id);
 updateDoc(document, fields_to_update );
 
 deleteDoc(document);
+
+***********************************
+setDoc vs addDoc
+***********************************
+https://firebase.google.com/docs/firestore/manage-data/add-data
+
+setDoc is used to create or update a document in a collection. If a document with the specified ID already exists, 
+setDoc will overwrite its existing data with the new data specified in the method call. If the document doesn't 
+exist, setDoc will create a new document with the specified ID and the specified data.
+
+setDoc Example:
+
+/ Add a new document(with id="LA") in collection "cities"
+
+const cityRef = doc(db, 'cities', 'LA');
+
+await setDoc(cityRef, {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA"
+});
+
+
+************
+
+On the other hand, addDoc is used to add a new document to a collection. addDoc generates a new document ID for the 
+new document, and the data specified in the method call is set in the new document. If the write operation is 
+successful, addDoc returns a promise that resolves with a reference to the newly created document.
+
+addDoc Example:
+
+
+const usersCollectionRef = collection(db, "users");
+
+const createUser = async () => {
+  await addDoc(usersCollectionRef, { name: newName, age: Number(newAge) });
+};
+
+
+***********************************
