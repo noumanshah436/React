@@ -1,7 +1,2 @@
 
-
-1) npm run firebase:emulate
-
-Look into the file "Notes/start emulator.txt" in case of any error
-
-2) npm run start
+npm run start

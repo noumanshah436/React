@@ -1,0 +1,5 @@
+
+
+deploy function to firebase:
+
+$ firebase deploy --only functions

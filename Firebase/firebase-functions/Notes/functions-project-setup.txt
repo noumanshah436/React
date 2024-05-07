@@ -1,0 +1,18 @@
+free tier = spark
+
+1) initialize the firebase instance in the project
+
+$ firebase init
+
+fowllow these steps:
+
+ready to proceed = yes
+
+
+created files:
+/home/dev/programming-toolkit/React/Firebase/functions
+/home/dev/programming-toolkit/React/Firebase/firebase.json
+/home/dev/programming-toolkit/React/Firebase/.firebaserc
+/home/dev/programming-toolkit/React/Firebase/.gitignore
+
+$ 

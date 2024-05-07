@@ -1,0 +1,6 @@
+Firebase Functions (net ninja)
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9i_aLkr62adUTJi53y7OjOf
+ 
+
+
+https://firebase.google.com/docs/functions/callable?gen=2nd#node.js_3
