@@ -1,0 +1,28 @@
+Setting Up React with Firebase Functions: Step-by-Step Tutorial
+
+https://www.youtube.com/watch?v=NKwgojLfT-8&t=30s
+
+************************************
+
+free tier = spark (cannot use function with this )
+
+so we are using emulator that run in our local machine
+
+************************************
+
+1) initialize the firebase instance in the project
+
+$ firebase init
+
+fowllow these steps:
+
+- ready to proceed = yes
+- select project to use
+
+created files:
+/home/dev/programming-toolkit/React/Firebase/crud-firebase/functions
+/home/dev/programming-toolkit/React/Firebase/crud-firebase/firebase.json
+/home/dev/programming-toolkit/React/Firebase/crud-firebase/.firebaserc
+/home/dev/programming-toolkit/React/Firebase/crud-firebase/.gitignore
+
+$ 

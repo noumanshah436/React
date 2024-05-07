@@ -1,0 +1,2 @@
+React Expense Tracker App - Build & Deploy A React Firebase Beginner Project
+https://www.youtube.com/watch?v=_ycD0d7skdQ&list=PLpPqplz6dKxUfvM22GXRvYA4s-mvJE0XF&index=8

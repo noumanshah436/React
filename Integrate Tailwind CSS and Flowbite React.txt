@@ -1,0 +1,74 @@
+
+https://flowbite.com/docs/getting-started/react/
+
+https://flowbite.com/docs/getting-started/react/
+
+https://flowbite-react.com/docs/guides/vite
+
+*********************************************
+
+
+Integrate Tailwind CSS and Flowbite React
+
+We aim to enhance the styling capabilities of our application by integrating Tailwind CSS and Flowbite. This integration will provide us with a robust set of utility classes and streamlined workflow for designing and developing user interfaces.
+
+Tasks:
+
+Install Tailwind CSS: Set up Tailwind CSS in the project environment to leverage its utility-first approach for styling components.
+Configure Tailwind: Configure Tailwind CSS to customize design such as colors, spacing, and typography to align with our figma design system.
+Integrate Flowbite: Integrate Flowbite into the development workflow to use its interactive UI components built with the utility classes from Tailwind CSS
+
+
+
+1)
+$ npm install -D tailwindcss postcss autoprefixer
+ 
+2) 
+$ npx tailwindcss init -p
+
+Created Tailwind CSS config file: tailwind.config.js
+Created PostCSS config file: postcss.config.js
+ 
+ 
+3)  
+tailwind.config.js file:
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+4) 
+Set up the Tailwind directives inside the ./src/index.css file:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+also add this css file in index.js
+
+import './index.css'
+
+5)
+$ npm install flowbite flowbite-react
+
+6) 
+
+Require Flowbite as a plugin inside your tailwind.config.js file:
+module.exports = {
+
+    plugins: [
+        require('flowbite/plugin')
+    ]
+
+}
+
+
+
+
+7) start app

@@ -1,0 +1,77 @@
+Firebase CLI:
+https://firebaseopensource.com/projects/firebase/firebase-tools/
+
+
+
+******************************************************************
+Configuration Commands
+******************************************************************
+Command	                    Description
+
+login	                    Authenticate to your Firebase account. Requires access to a web browser.
+logout	                    Sign out of the Firebase CLI.
+login:ci	                Generate an authentication token for use in non-interactive environments.
+login:add	                Authorize the CLI for an additional account.
+login:list	                List authorized CLI accounts.
+login:use	                Set the default account to use for this project
+use	                        Set active Firebase project, manage project aliases.
+open	                    Quickly open a browser to relevant project resources.
+init	                    Setup a new Firebase project in the current directory. This command will create a firebase.json configuration file in your current directory.
+help	                    Display help information about the CLI or specific commands.
+
+******************************************************************
+Project Management Commands
+******************************************************************
+
+apps:create	                Create a new Firebase app in a project.
+apps:list	                List the registered apps of a Firebase project.
+apps:sdkconfig	            Print the configuration of a Firebase app.
+projects:addfirebase	    Add Firebase resources to a Google Cloud Platform project.
+projects:create	            Create a new Firebase project.
+projects:list	            Print a list of all of your Firebase projects.
+
+******************************************************************
+
+Use above commands with firebase prefix as:
+
+firebase login
+firebase logout
+
+firebase apps:list
+
+**********************************************************************
+Manage multiple users via the CLI
+**********************************************************************
+
+https://stackoverflow.com/questions/33916448/how-to-change-firebase-user-login-identity-from-command-line-cli
+
+You can manage multiple users without re-authenticating, as of version 9.9.0 of the Firebase CLI.
+
+firebase login:add
+firebase login:list
+firebase login:use
+
+Example:
+
+firebase login:add david@example.com
+firebase login:add alice@example.com
+firebase login:add bob@example.com
+firebase login:use alice@example.com
+firebase login:list
+firebase deploy --only hosting # deploy as alice@example.com
+
+
+Get a URL printed to the terminal.
+
+firebase login --reauth
+
+Use that link in the browser with the needed profile.
+
+Still working, less convenient older answer
+
+The easiest way to handle this is to logout User-Alice and the login User-Bob.
+
+firebase logout
+firebase login
+
+But, if you're logged as User-Alice with a Google account in the browser you'll need to sign out there first.
