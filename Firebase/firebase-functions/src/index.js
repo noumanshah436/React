@@ -2,15 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Queries from "./components/Queries";
-import MyFunctions from "./components/MyFunctions";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MyFunctions />
-    {/* <App /> */}
-    {/* <Queries /> */}
+    <App />
   </React.StrictMode>
 );
 
