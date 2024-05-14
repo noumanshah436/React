@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-
-import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase-config";
-
-import styles from "./Signup.module.css";
 
 function Signup() {
   const navigate = useNavigate();
@@ -48,46 +44,47 @@ function Signup() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.innerBox}>
-        <h1 className={styles.heading}>Signup</h1>
-
-        <InputControl
-          label="Name"
-          placeholder="Enter your name"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, name: event.target.value }))
-          }
-        />
-        <InputControl
-          label="Email"
-          placeholder="Enter email address"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, email: event.target.value }))
-          }
-        />
-        <InputControl
-          label="Password"
-          placeholder="Enter password"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, pass: event.target.value }))
-          }
-        />
-
-        <div className={styles.footer}>
-          <b className={styles.error}>{errorMsg}</b>
+    <>
+      <div className="modal">
+        <h2>Register</h2>
+        <form className="register">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, name: event.target.value }))
+            }
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, email: event.target.value }))
+            }
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, pass: event.target.value }))
+            }
+          />
           <button onClick={handleSubmission} disabled={submitButtonDisabled}>
             Signup
           </button>
-          <p>
-            Already have an account?{" "}
-            <span>
-              <Link to="/login">Login</Link>
-            </span>
-          </p>
+          <p className="error">{errorMsg}</p>
+        </form>
+        <div>
+          Got an account?{" "}
+          <Link className="switch" to="/login">
+            Login Instead
+          </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

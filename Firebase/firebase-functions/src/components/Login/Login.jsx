@@ -1,10 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
-import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase-config";
-
-import styles from "./Login.module.css";
 import { useState } from "react";
 
 function Login() {
@@ -40,40 +36,45 @@ function Login() {
     setErrorMsg("");
     login();
   };
+
   return (
-    <div className={styles.container}>
-      <div className={styles.innerBox}>
-        <h1 className={styles.heading}>Login</h1>
+    <>
+      <div className="modal">
+        <h2>Login</h2>
+        <div className="login">
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, email: event.target.value }))
+            }
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, pass: event.target.value }))
+            }
+          />
 
-        <InputControl
-          label="Email"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, email: event.target.value }))
-          }
-          placeholder="Enter email address"
-        />
-        <InputControl
-          label="Password"
-          onChange={(event) =>
-            setValues((prev) => ({ ...prev, pass: event.target.value }))
-          }
-          placeholder="Enter Password"
-        />
-
-        <div className={styles.footer}>
-          <b className={styles.error}>{errorMsg}</b>
-          <button disabled={submitButtonDisabled} onClick={handleSubmission}>
+          <p className="error">{errorMsg}</p>
+        </div>
+        <div>
+          <button
+            className="button"
+            disabled={submitButtonDisabled}
+            onClick={handleSubmission}
+          >
             Login
           </button>
-          <p>
-            Already have an account?{" "}
-            <span>
-              <Link to="/signup">Sign up</Link>
-            </span>
-          </p>
+          <br />
+          No account?
+          <Link to="/signup">Register instead</Link>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

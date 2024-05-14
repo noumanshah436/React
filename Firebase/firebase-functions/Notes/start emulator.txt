@@ -6,5 +6,5 @@ https://www.youtube.com/watch?v=NKwgojLfT-8&t=30s
 $ firebase login
 
 $ firebase use tutorial-80678
-$ npm run firebase:emulate
+$ npm run firebase:emulate    (or firebase use default && firebase emulators:start)
 

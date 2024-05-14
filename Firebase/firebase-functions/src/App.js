@@ -9,9 +9,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase-config";
 import MyFunctions from "./components/MyFunctions";
 import Queries from "./components/Queries";
+import CRUD from "./components/CRUD/CRUD";
 
 function App() {
-  const [userName, setUserName] = useState("");
+  const [user, setUser] = useState("");
 
   useEffect(() => {
     // onAuthStateChanged takes two arguments: auth and the anonymous function callback
@@ -20,10 +21,10 @@ function App() {
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUserName(user);
+        setUser(user);
       } else {
         // user will be null
-        setUserName("");
+        setUser("");
       }
     });
   }, []);
@@ -36,7 +37,8 @@ function App() {
           <Route path="/my_functions" element={<MyFunctions />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Home name={userName.email} />} />
+          <Route path="/crud" element={<CRUD />} />
+          <Route path="/" element={<Home user={user} />} />
         </Routes>
       </Router>
     </div>

@@ -7,3 +7,23 @@ Look into the file "Notes/start emulator.txt" in case of any error
 2) npm run start
 
 
+
+*******************************************
+
+- Login + Signup + `Add request` function
+http://localhost:3000/
+
+
+- Execute Queries
+http://localhost:3000/queries
+
+
+- CRUD + Real time updates + simple filtering
+http://localhost:3000/crud
+
+
+- See firebase functions implementation:
+http://localhost:3000/my_functions
+
+
+*******************************************

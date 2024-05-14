@@ -106,7 +106,6 @@ function CRUD() {
     // };
   }, []);
 
-  console.log(users);
   return (
     <div className="App">
       <input

@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const admin = require("firebase-admin");
 
 exports.sayHello = functions.https.onCall((data, context) => {
   return "Hello world";
@@ -38,6 +39,28 @@ exports.getFullName = onCall((request) => {
   // const email = request.auth.token.email || null;
 
   return {
-     fullName: `${firstName} ${lastName}`,
+    fullName: `${firstName} ${lastName}`,
   };
+});
+
+// http callable function (adding a request)
+exports.addRequest = functions.https.onCall(async (data, context) => {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+      "unauthenticated",
+      "only authenticated users can add requests"
+    );
+  }
+  if (data.text.length > 30) {
+    throw new functions.https.HttpsError(
+      "invalid-argument",
+      "request must be no more than 30 characters long"
+    );
+  }
+
+  return admin.firestore().collection('requests').add({
+    text: data.text,
+    upvotes: 0
+  });
+
 });

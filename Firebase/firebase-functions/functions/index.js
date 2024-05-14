@@ -17,12 +17,14 @@ const {
   myFunction,
   sayHello,
   getFullName,
+  addRequest,
 } = require("./callableFunctions/callableFunctions");
 const {
   randomNumber,
   helloWorld,
   toTheDojo,
 } = require("./endpointRequestFunctions/endpointRequests");
+const { newUserSignUp, userDeleted } = require("./authTriggers/authTriggers");
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
@@ -37,3 +39,10 @@ exports.getFullName = getFullName;
 exports.helloWorld = helloWorld;
 exports.randomNumber = randomNumber;
 exports.toTheDojo = toTheDojo;
+
+// auth triggers
+exports.newUserSignUp = newUserSignUp;
+exports.userDeleted = userDeleted;
+
+// request oncall functions
+exports.addRequest = addRequest;
